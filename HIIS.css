@@ -51,7 +51,11 @@ body {
   .nav-menu a:hover {
     color: #d20303;
   }
-  
+  .nav-menu li.right {
+    margin-left: auto; /* duwt het naar rechts */
+    margin-right: 0;
+  }
+
   /* Dropdown */
   .dropdown {
     position: relative; /* 🔹 zorgt dat de submenu zich ten opzichte van deze li positioneert */
