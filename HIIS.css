@@ -427,9 +427,9 @@ canvas {
   margin: 0;
 }
 
-.nav-menu li {
-  margin-right: 20px; /* afstand tussen links */
-}
+/* .nav-menu li {
+  margin-right: 20px; 
+} */
 
 /* Reflectie helemaal rechts */
 .nav-menu li.right {
