@@ -1,0 +1,416 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0eef6;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #20B2AA;
+    color: #fff;
+    position: sticky;   /* blijft aan de top hangen */
+    top: 0;
+    z-index: 1000;
+    gap: 28em;          /* 🔹 grote ruimte tussen titel en menu */
+  }
+  
+  /* Titel */
+  .portfolio-title a {
+    margin: 0;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1em;
+  }
+  
+  /* Links */
+  .nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 0;
+    display: inline-block;
+    font-size: 1.2em;
+  }
+  
+  .nav-menu a:hover {
+    color: #d20303;
+  }
+  
+  /* Dropdown */
+  .dropdown {
+    position: relative; /* 🔹 zorgt dat de submenu zich ten opzichte van deze li positioneert */
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #20B2AA;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: rgba(120, 120, 120, 0.526);
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Ruimte tussen header en timeline */
+  .timeline-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 2rem; /* 🔹 kleine buffer, maar geen echte gap meer in de lijn */
+  }
+  
+  /* Verticale lijn in het midden */
+  .timeline-grid::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;               /* 🔹 lijn start exact bovenaan */
+    width: 4px;
+    height: 100%;
+    background: #b3d6ec;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  /* Timeline item */
+  .timeline-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease;
+    background-color: rgb(249, 243, 231);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Titel bovenop afbeelding */
+  .timeline-title {
+    color: #000000;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-shadow: 0 2px 6px rgb(255, 255, 255);
+    z-index: 2;
+  }
+  
+  /* Uitklap content */
+  .timeline-content {
+    display: none;
+    padding: 1rem;
+    background-color: rgb(249, 243, 231);
+    border-radius: 8px;
+  }
+  
+  /* Bij uitklappen */
+  .timeline-item.expanded {
+    height: auto;
+    background: none;
+  }
+  
+  .timeline-item.expanded .timeline-content {
+    display: block;
+  }
+  
+  /* Hover effect */
+  .timeline-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Overlay-laag boven de afbeelding */
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(249, 243, 231, 0.79);
+    z-index: 1;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Tekst boven overlay */
+  .timeline-item > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+
+  /* Voorpagina - tekst links, afbeelding rechts */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 100px auto; /* ruimte onder je sticky header */
+    padding: 2rem;
+    gap: 3rem;
+  }
+  
+  /* Tekstblok */
+  .intro-text {
+    flex: 1;
+  }
+  
+  .intro-text h1 {
+    font-size: 2.5rem;
+    color: #1c4d63;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  /* Knop */
+  .intro-button {
+    background-color: #20B2AA;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .intro-button:hover {
+    background-color: #178a83;
+  }
+  
+  /* Afbeelding rechts */
+  .intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Responsive (mobiel) */
+  @media (max-width: 800px) {
+    .intro-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .intro-image {
+      order: -1; /* afbeelding boven tekst op mobiel */
+    }
+  }
+
+  .boxes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 5em;
+  }
+
+  .box {
+    width: 75em;
+    height: 25em;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* tekst onderaan */
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-decoration: none;
+    padding: 10px;
+    background-size: contain; /* afbeelding volledig vullen */
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.2s;
+  }
+
+  .box:hover {
+    transform: scale(1.05);
+  }
+
+  /* Achtergrondafbeeldingen per box */
+  .ict {
+    background-image: url('Img/Tumb2.jpg');
+    background-color: #014b25;
+  }
+
+  .eco {
+    background-image: url('Img/Tumb1.jpg');
+    background-color: rgb(56, 69, 72);
+  }
+
+  .video {
+    background-image: url('Img/Tumb3.jpg');
+  background-color: #000000;}
+
+  /* Hoofdcontainer Joop-pagina */
+.joop-case,
+.common  {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  font-family: "Inter", system-ui, sans-serif;
+  color: #111827;
+  line-height: 1.7;
+}
+
+.joop-case h2,
+.common h2
+ {
+  font-size: 1.8rem;
+  color: #b91c1c;
+  margin-bottom: 20px;
+}
+
+.common h2{
+  text-align: center;
+}
+
+
+.joop-case h3 {
+  font-size: 1.3rem;
+  color: #b91c1c;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.joop-case p,
+.common p {
+  margin-bottom: 18px;
+  color: #374151;
+  font-size: 1rem;
+}
+.common p{
+  color: #b91c1c;
+
+}
+/* Media container */
+.joop-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.joop-item h4 {
+  font-size: 1rem;
+  color: #b91c1c;
+  margin-bottom: 8px;
+}
+
+/* Placeholder styling */
+.joop-placeholder {
+  background: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Zorg dat afbeeldingen in placeholder passen */
+.joop-placeholder img, .joop-placeholder video {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Overlay voor klikbare afbeeldingen */
+/* Overlay */
+#overlay {
+  position: fixed;
+  display: none; /* start hidden */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Cursor pointer voor klikbare afbeeldingen */
+.zoomable {
+  cursor: pointer;
+}
+
+#pdf-viewer {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+canvas {
+  display: block;
+  margin: 10px auto;
+}
