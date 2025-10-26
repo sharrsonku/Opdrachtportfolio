@@ -414,3 +414,50 @@ canvas {
   display: block;
   margin: 10px auto;
 }
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  margin-right: 20px; /* afstand tussen links */
+}
+
+/* Reflectie helemaal rechts */
+.nav-menu li.right {
+  margin-left: auto; /* duwt het naar rechts */
+  margin-right: 0;
+}
+
+.reflectie-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  line-height: 1.7;
+  font-family: 'Arial', sans-serif;
+}
+
+.reflectie-section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.reflectie-section ul {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.reflectie-section ul li {
+  margin-bottom: 15px;
+}
+
+.reflectie-section strong {
+  color: #222;
+}
