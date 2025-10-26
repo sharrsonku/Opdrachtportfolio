@@ -14,7 +14,7 @@ body {
     position: sticky;   /* blijft aan de top hangen */
     top: 0;
     z-index: 1000;
-    /* gap: 20em;          🔹 grote ruimte tussen titel en menu */
+    gap: -8em; 
   }
   
   /* Titel */
