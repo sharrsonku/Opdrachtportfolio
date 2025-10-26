@@ -433,7 +433,7 @@ canvas {
 
 /* Reflectie helemaal rechts */
 .nav-menu li.right {
-  margin-left: auto; /* duwt het naar rechts */
+  margin-left: 0; /* duwt het naar rechts */
   margin-right: 0;
 }
 
