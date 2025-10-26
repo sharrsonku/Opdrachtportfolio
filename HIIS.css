@@ -14,7 +14,7 @@ body {
     position: sticky;   
     top: 0;
     z-index: 1000;
-    gap: -8em; 
+    gap: -40em; 
   }
   
   .portfolio-title a {
