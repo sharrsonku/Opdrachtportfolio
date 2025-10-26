@@ -25,38 +25,3 @@ document.addEventListener("DOMContentLoaded", () => {
       item.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
-
-  // =========================
-  // PDF.js functionaliteit
-  // =========================
-  const pdfViewer = document.getElementById('pdf-viewer');
-  if (pdfViewer) {
-    const url = 'opdrachten/scanOnderzoek.pdf';
-    const pdfjsLib = window['pdfjs-dist/build/pdf'];
-    pdfjsLib.GlobalWorkerOptions.workerSrc =
-      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.141/pdf.worker.min.js';
-
-    pdfjsLib.getDocument(url).promise
-      .then(pdf => {
-        for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
-          pdf.getPage(pageNumber).then(page => {
-            const scale = 1.5;
-            const viewport = page.getViewport({ scale });
-
-            const canvas = document.createElement('canvas');
-            const context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-
-            pdfViewer.appendChild(canvas);
-
-            page.render({ canvasContext: context, viewport: viewport });
-          });
-        }
-      })
-      .catch(err => {
-        console.error('Fout bij laden PDF: ', err);
-        pdfViewer.textContent = 'PDF kon niet geladen worden.';
-      });
-  }
-});
