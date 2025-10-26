@@ -11,13 +11,11 @@ body {
     padding: 1em 2em;
     background-color: #20B2AA;
     color: #fff;
-    position: sticky;   /* blijft aan de top hangen */
+    position: sticky;   
     top: 0;
     z-index: 1000;
-    gap: -8em; 
   }
   
-  /* Titel */
   .portfolio-title a {
     margin: 0;
     font-size: 1em;
@@ -38,7 +36,6 @@ body {
     gap: 1em;
   }
   
-  /* Links */
   .nav-menu a {
     color: #fff;
     text-decoration: none;
@@ -59,7 +56,7 @@ body {
 
   /* Dropdown */
   .dropdown {
-    position: relative; /* 🔹 zorgt dat de submenu zich ten opzichte van deze li positioneert */
+    position: relative; 
   }
   
   .dropdown-menu {
@@ -89,7 +86,6 @@ body {
     display: block;
   }
   
-  /* Ruimte tussen header en timeline */
   .timeline-grid {
     display: flex;
     flex-direction: column;
@@ -97,15 +93,14 @@ body {
     max-width: 900px;
     margin: 0 auto;
     position: relative;
-    padding-top: 2rem; /* 🔹 kleine buffer, maar geen echte gap meer in de lijn */
+    padding-top: 2rem; 
   }
   
-  /* Verticale lijn in het midden */
   .timeline-grid::before {
     content: "";
     position: absolute;
     left: 50%;
-    top: 0;               /* 🔹 lijn start exact bovenaan */
+    top: 0;               
     width: 4px;
     height: 100%;
     background: #b3d6ec;
@@ -113,7 +108,6 @@ body {
     border-radius: 2px;
   }
   
-  /* Timeline item */
   .timeline-item {
     position: relative;
     border-radius: 12px;
@@ -131,7 +125,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   
-  /* Titel bovenop afbeelding */
   .timeline-title {
     color: #000000;
     text-align: center;
@@ -142,7 +135,6 @@ body {
     z-index: 2;
   }
   
-  /* Uitklap content */
   .timeline-content {
     display: none;
     padding: 1rem;
@@ -150,7 +142,6 @@ body {
     border-radius: 8px;
   }
   
-  /* Bij uitklappen */
   .timeline-item.expanded {
     height: auto;
     background: none;
@@ -160,13 +151,11 @@ body {
     display: block;
   }
   
-  /* Hover effect */
   .timeline-item:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
-  /* Overlay-laag boven de afbeelding */
   .timeline-item::after {
     content: "";
     position: absolute;
@@ -182,19 +171,16 @@ body {
     z-index: 2;
   }
   
-
-  /* Voorpagina - tekst links, afbeelding rechts */
 .intro-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1100px;
-    margin: 100px auto; /* ruimte onder je sticky header */
+    margin: 100px auto; 
     padding: 2rem;
     gap: 3rem;
   }
   
-  /* Tekstblok */
   .intro-text {
     flex: 1;
   }
@@ -212,7 +198,6 @@ body {
     margin-bottom: 2rem;
   }
   
-  /* Knop */
   .intro-button {
     background-color: #20B2AA;
     color: white;
@@ -227,7 +212,6 @@ body {
     background-color: #178a83;
   }
   
-  /* Afbeelding rechts */
   .intro-image {
     flex: 1;
     display: flex;
@@ -241,7 +225,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   
-  /* Responsive (mobiel) */
   @media (max-width: 800px) {
     .intro-section {
       flex-direction: column;
@@ -249,7 +232,7 @@ body {
     }
   
     .intro-image {
-      order: -1; /* afbeelding boven tekst op mobiel */
+      order: -1; 
     }
   }
 
@@ -265,14 +248,14 @@ body {
     height: 25em;
     color: white;
     display: flex;
-    align-items: flex-end; /* tekst onderaan */
+    align-items: flex-end; 
     justify-content: center;
     font-size: 18px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     text-decoration: none;
     padding: 10px;
-    background-size: contain; /* afbeelding volledig vullen */
+    background-size: contain; 
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.2s;
@@ -341,7 +324,6 @@ body {
   color: #b91c1c;
 
 }
-/* Media container */
 .joop-media {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -355,7 +337,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* Placeholder styling */
 .joop-placeholder {
   background: #f9fafb;
   border: 1px dashed #d1d5db;
@@ -366,7 +347,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Zorg dat afbeeldingen in placeholder passen */
 .joop-placeholder img, .joop-placeholder video {
   max-width: 100%;
   max-height: 250px;
@@ -374,8 +354,6 @@ body {
   cursor: pointer;
 }
 
-/* Overlay voor klikbare afbeeldingen */
-/* Overlay */
 #overlay {
   position: fixed;
   display: none; /* start hidden */
@@ -404,7 +382,6 @@ body {
   cursor: pointer;
 }
 
-/* Cursor pointer voor klikbare afbeeldingen */
 .zoomable {
   cursor: pointer;
 }
@@ -427,9 +404,9 @@ canvas {
   margin: 0;
 }
 
-/* .nav-menu li {
+.nav-menu li {
   margin-right: 20px; 
-} */
+}
 
 /* Reflectie helemaal rechts */
 .nav-menu li.right {
