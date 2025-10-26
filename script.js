@@ -24,4 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
       // Scrollen zodat het item bovenaan het scherm staat
       item.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-  });
+  }); // <-- sluit forEach
+}); // <-- sluit DOMContentLoaded
