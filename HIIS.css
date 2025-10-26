@@ -14,7 +14,7 @@ body {
     position: sticky;   /* blijft aan de top hangen */
     top: 0;
     z-index: 1000;
-    gap: 28em;          /* 🔹 grote ruimte tussen titel en menu */
+    gap: 20em;          /* 🔹 grote ruimte tussen titel en menu */
   }
   
   /* Titel */
@@ -52,8 +52,7 @@ body {
     color: #d20303;
   }
   .nav-menu li.right {
-    margin-left: auto; /* duwt het naar rechts */
-    margin-right: 0;
+    padding-left: 24em;
   }
 
   
@@ -412,13 +411,13 @@ body {
 
 #pdf-viewer {
   width: 100%;
-  height: 600px;
+  height: auto;
   border: 1px solid #ccc;
   overflow: auto;
 }
 canvas {
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
 .nav-menu {
