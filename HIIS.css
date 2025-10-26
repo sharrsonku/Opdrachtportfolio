@@ -14,7 +14,7 @@ body {
     position: sticky;   /* blijft aan de top hangen */
     top: 0;
     z-index: 1000;
-    gap: 20em;          /* 🔹 grote ruimte tussen titel en menu */
+    /* gap: 20em;          🔹 grote ruimte tussen titel en menu */
   }
   
   /* Titel */
@@ -413,7 +413,7 @@ body {
   width: 100%;
   height: auto;
   border: 1px solid #ccc;
-  overflow:visible;
+  overflow: auto;
 }
 canvas {
   display: block;
