@@ -48,11 +48,10 @@ body {
   .nav-menu a:hover {
     color: #d20303;
   }
-  .nav-menu li.right {
+  /* .nav-menu li.right {
     padding-left: 16em;
-  }
+  } */
 
-  
 
   /* Dropdown */
   .dropdown {
@@ -404,10 +403,7 @@ canvas {
 }
 
 /* Reflectie helemaal rechts */
-.nav-menu li.right {
-  margin-left: 10em; /* duwt het naar rechts */
-  margin-right: 0;
-}
+
 
 .reflectie-section {
   max-width: 900px;
